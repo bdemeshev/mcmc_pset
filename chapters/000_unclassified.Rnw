@@ -367,6 +367,54 @@ Q(\beta) = \sum_{i=1}^n (y_i - \hat y_i)^2 + \lambda \sum_{j=1}^k |\beta_j|.
 \begin{enumerate}
   \item Найдите апостериорное распределение параметра $p$.
   \item Найдите апостериорный прогнозный закон распределения $y_{n+1}$.
+  \item Проинтерпретируйте смысл априорных гиперпараметров $\alpha$ и $\beta$.
+\end{enumerate}
+\begin{sol}
+\end{sol}
+\end{problem}
+
+\begin{problem}
+При известном параметре $p$, наблюдаемые $y_1$, \ldots, $y_n$ независимы и имеют биномиальное распределение, $y_i|p \sim Bin(k, p)$. Априорно параметр $p$ имеет бета-распределение, $p \sim beta(\alpha, \beta)$.
+
+\begin{enumerate}
+  \item Найдите апостериорное распределение параметра $p$.
+  \item Проинтерпретируйте смысл априорных гиперпараметров $\alpha$ и $\beta$.
+\end{enumerate}
+\begin{sol}
+\end{sol}
+\end{problem}
+
+\begin{problem}
+При известном параметре $\lambda$, наблюдаемые $y_1$, \ldots, $y_n$ независимы и имеют пуассоновское распределение, $y_i|\lambda \sim Pois(\lambda)$. Априорно параметр $\lambda$ имеет гамма-распределение, $p \sim Gamma(shape=\alpha, rate=\beta)$.
+
+\begin{enumerate}
+  \item Найдите апостериорное распределение параметра $\lambda$.
+  \item Найдите апостериорный прогнозный закон распределения $y_{n+1}$.
+  \item Проинтерпретируйте смысл априорных гиперпараметров $\alpha$ и $\beta$.
+\end{enumerate}
+\begin{sol}
+\end{sol}
+\end{problem}
+
+
+\begin{problem}
+При известном параметре $\sigma^2$, наблюдаемые $y_1$, \ldots, $y_n$ независимы и имеют нормальное распределение, $y_i|\sigma^2 \sim \cN(9, \sigma^2)$. Априорно параметр $\sigma^2$ имеет обратное гамма-распределение, $\sigma^2 \sim InvGamma(shape=\alpha, rate=\beta)$.
+
+\begin{enumerate}
+  \item Найдите апостериорное распределение параметра $\sigma^2$.
+  \item Проинтерпретируйте смысл априорных гиперпараметров $\sigma^2$ и $\beta$.
+\end{enumerate}
+\begin{sol}
+\end{sol}
+\end{problem}
+
+
+\begin{problem}
+При известном параметре $\mu$, наблюдаемые $y_1$, \ldots, $y_n$ независимы и имеют нормальное распределение, $y_i|\mu \sim \cN(\mu, 9)$. Априорно параметр $\mu$ имеет нормальное распределение, $\mu \sim \cN(\ubar{\mu}, \ubar{\sigma}^2)$.
+
+\begin{enumerate}
+  \item Найдите апостериорное распределение параметра $\mu$.
+  \item Найдите апостериорный прогнозный закон распределения $y_{n+1}$.
 \end{enumerate}
 \begin{sol}
 \end{sol}
