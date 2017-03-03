@@ -314,9 +314,9 @@ y = X\beta + u,
 Q(\beta) = \sum_{i=1}^n (y_i - \hat y_i)^2 + \lambda \sum_{j=1}^k \beta_j^2.
 \]
 
-Рассмотрим байесовский подход к регрессии. Предположим, что априорное распределение имеет вид $\sigma^2 \sim InvGamma(a, b)$, $\beta_j|\sigma^2 \sim \cN(0; c)$.
+Рассмотрим байесовский подход к регрессии. Предположим, что априорное распределение имеет вид $\sigma^2 \sim InvGamma(a, b)$, $\beta_j|\sigma^2 \sim \cN(0; c(\sigma^2))$.
 
-При каких $a$, $b$ и $c$ апостериорная мода $\hat\beta_{MAP}$ совпадёт с $\hat\beta_{Ridge}$?
+При каких $a$, $b$ и $c(\sigma^2)$ апостериорная мода $\hat\beta_{MAP}$ совпадёт с $\hat\beta_{Ridge}$?
 \begin{sol}
 \end{sol}
 \end{problem}
@@ -333,10 +333,11 @@ y = X\beta + u,
 Q(\beta) = \sum_{i=1}^n (y_i - \hat y_i)^2 + \lambda \sum_{j=1}^k |\beta_j|.
 \]
 
-Рассмотрим байесовский подход к регрессии. Предположим, что априорное распределение имеет вид $\sigma^2 \sim InvGamma(a, b)$, $\beta_j|\sigma^2 \sim DoubleExp(c)$.
+Рассмотрим байесовский подход к регрессии. Предположим, что априорное распределение имеет вид $\sigma^2 \sim InvGamma(a, b)$, $\beta_j|\sigma^2 \sim DoubleExp(c(\sigma^2))$.
 
-При каких $a$, $b$ и $c$ апостериорная мода $\hat\beta_{MAP}$ совпадёт с $\hat\beta_{LASSO}$?
+При каких $a$, $b$ и $c(\sigma^2)$ апостериорная мода $\hat\beta_{MAP}$ совпадёт с $\hat\beta_{LASSO}$?
 \begin{sol}
+  При любых $a$ и $b$, и $c(\sigma^2)=\lambda/2\sigma^2$
 \end{sol}
 \end{problem}
 
@@ -350,9 +351,27 @@ Q(\beta) = \sum_{i=1}^n (y_i - \hat y_i)^2 + \lambda \sum_{j=1}^k |\beta_j|.
 \item Возможно ли использовать на практике данное $c$?
 \end{enumerate}
 \begin{sol}
-  $c=\frac{1}{n + \mu^2/\sigma^2}$, нет, так как $\mu$ и $\sigma^2$ неизвестны.
+  $c=\frac{1}{n + \sigma^2/\mu^2}$, нет, так как $\mu$ и $\sigma^2$ неизвестны.
 \end{sol}
 \end{problem}
+
+\section{Сопряжённые распределение}
+
+Надёргать: википедия, статья Айвазяна, примеры у Tsay
+
+названия распределений — с вики
+
+\begin{problem}
+При известном параметре $p$, наблюдаемые $y_1$, \ldots, $y_n$ независимы и имеют распределение Бернулли, $y_i|p \sim Bernoulli(p)$. Априорно параметр $p$ имеет бета-распределение, $p \sim beta(\alpha, \beta)$.
+
+\begin{enumerate}
+  \item Найдите апостериорное распределение параметра $p$.
+  \item Найдите апостериорный прогнозный закон распределения $y_{n+1}$.
+\end{enumerate}
+\begin{sol}
+\end{sol}
+\end{problem}
+
 
 
 \Closesolutionfile{solution_file}
